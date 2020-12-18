@@ -11,8 +11,17 @@ with open('config.json', 'r') as c:
 
 local_server = True
 app = Flask(__name__)
+
+'''
+MAIL_SERVER : Name/IP address of the email server.
+MAIL_PORT : Port number of server used.
+MAIL_USE_SSL : Enable/disable Secure Sockets Layer encryption
+Mail server didn't allow to send unencrypted email so ssl used
+MAIL_USERNAME : Username of the sender
+MAIL_PASSWORD : The password of the corresponding Username of the sender
+'''
 app.config.update(
-    MAIL_SERVER = 'smtp.gmail.com',
+	MAIL_SERVER = 'smtp.gmail.com',
     MAIL_PORT = '465',
     MAIL_USE_SSL = True,
     MAIL_USERNAME = params['gmail-user'],
@@ -20,7 +29,16 @@ app.config.update(
 )
 mail = Mail(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = params['local_uri']
+'''sqlalchemy for database connection'''
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@localhost:3307/iit_bhilai'
+
+'''
+pymsql-database connector
+iit_bhilai-database name
+we can put server IP in place of localhost if our server is something different
+'''
+
 
 db = SQLAlchemy(app)
 
@@ -55,7 +73,7 @@ def contact():
         db.session.add(entry)
         db.session.commit()
         mail.send_message('New message from ' + name,
-                          sender=email,
+                          sender='kd',
                           recipients = [params['gmail-user']],
                           body = message + "\n" + phone
                           )
@@ -63,6 +81,7 @@ def contact():
     return render_template('Contact.html')
 
 
+'''Gmail blocked the login attempt'''
 
 app.run(debug=True)
 
