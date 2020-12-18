@@ -73,7 +73,7 @@ def contact():
         db.session.add(entry)
         db.session.commit()
         mail.send_message('New message from ' + name,
-                          sender='kd',
+                          sender='kdivyansh658@gmail.com',
                           recipients = [params['gmail-user']],
                           body = message + "\n" + phone
                           )
