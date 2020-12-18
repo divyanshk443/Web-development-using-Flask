@@ -1,0 +1,30 @@
+ {% extends "layout.html"  %}
+
+{%block body%}
+    <section class="background firstSection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <p class="text-big">{{params['title']}}</p>
+                <p class="text-small">Indian Institute of Technology Bhilai (IIT Bhilai) is a public institute in Bhilai, Chhattisgarh, India. It is one of the six new IITs established by the Ministry of Human Resource Development, Government of India, located in Chhattisgarh state.</p>
+               
+            </div>
+
+            <div class="secondHalf">
+                <img src="{{ url_for('static', filename='img/logo.jfif') }}" alt="Laptop Image">
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="paras">
+        <p class="sectionTag text-big">Indian Institute of Technology (IIT) Bhilai</p>
+        <p class="sectionSubTag text-small">IIT Bhilai, despite being recently established, has provided ample opportunities to its students to excel both in academics and extracurricular activities. The institute has introduced the fractal academic programme, which fosters an environment of interdisciplinary learning. The students are provided with well-equipped laboratories and a resourceful central library, which help them acquire holistic education. However, they are also encouraged to look beyond the classroom environment and participate wholeheartedly in the vibrant life of the student community on campus. Council of Student Affairs (CoSA) is the student body, which actively conducts and manages student related activities of IIT Bhilai. </p>
+        </div>
+        <div class="thumbnail">
+            <img src="{{ url_for('static', filename='img/Building.jfif') }}" alt="laptop image" class="imgFluid">
+        </div>
+    </section>
+
+     
+  
+   {% endblock %}

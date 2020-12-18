@@ -1,0 +1,22 @@
+ {% extends "layout.html"  %}
+
+{%block body%}
+
+  <section class="contact" id="contact">
+        <h1 class="text-center">Contact Us</h1>
+
+      
+    <form action = "/contact" method="post" > 
+        <div class="form">
+            <input class="form-input" type="text" name="name"  placeholder="Enter Your name">
+            <input class="form-input" type="text" name="phone"  placeholder="Enter Your Phone">
+            <input class="form-input" type="email" name="email" placeholder="Enter Your email">
+            <input class="form-input" type="text" name="message"  placeholder="Enter Your Message">
+             
+            <button class="btn btn-sm btn-dark">Submit</button>
+        </div>
+
+         </form>
+    </section>
+
+   {% endblock %}

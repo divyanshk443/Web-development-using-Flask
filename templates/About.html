@@ -1,0 +1,51 @@
+ {% extends "layout.html"  %}
+
+{%block body%}
+
+ <section class="section section-left">
+        <div class="paras">
+        <p class="sectionTag text-big">Indian Institute of Technology (IIT) Bhilai</p>
+        <p class="sectionSubTag text-small">Indian Institute of Technology (IIT) Bhilai was established in the state of Chhattisgarh by Ministry of Human Resource and Development in the year 2016.
+
+IIT Bhilai is presently housed in its transit campus at Government Engineering College (GEC) Raipur, Chhattisgarh.
+
+IIT Bhilai offers Bachelor of Technology (BTech), Master of Technology (MTech), Master of Science (MSc) and Doctoral programs (PhD) in various departments. The Institute made its modest start with introduction of BTech program in August 2016. The Institute is currently offering BTech and MTech programs in the departments of Computer Science and Engineering (CSE), Electrical Engineering (EE) and Mechanical Engineering (ME); and PhD program in the departments of Chemistry (CHM), Computer Science and Engineering (CSE), Electrical Engineering (EE), Mathematics (MTH), Mechanical Engineering (ME) and Physics (PHY).
+
+IIT Bhilai has established a 3-D Printing Lab that constitutes an integral part of 3-D Modeling and Design course, a fabrication lab, an electrical lab, a computer lab and a library in a short duration.
+
+Raipur, capital city of Chhattisgarh, also has IIIT, NIT, IIM and AIIMS. It is one of the fastest developing states in India.
+</p>
+        </div>
+        <div class="thumbnail">
+            <img src="{{ url_for('static',filename='img/About.jfif') }}" alt="laptop image" class="imgFluid">
+        </div> 
+    </section>
+    <section class="section">
+        <div class="paras">
+        <p class="sectionTag text-big">Vision and Mission
+</p>
+        <p class="sectionSubTag text-small">IIT Bhilai aspires to play a significant role in the national growth. IIT Bhilai is committed to the following:
+To provide a conducive environment for technological and cultural studies
+Respect and encourage independence
+To Provide technological cognizance to speedup the wheels of national progress
+To stimulate innovation and originality
+To Strive for brilliance and eminence in diverse spheres.</p>
+
+        <p class="sectionSubTag text-small"> 
+              IIT Bhilai has identified the following as its core values:
+              <li>Righteousness</li>
+              <li>Brilliance</li>
+              <li>Academic finesse</li>
+
+
+          </p>
+        </div>
+        <div class="thumbnail">
+            <img src="{{ url_for('static',filename='img/Building.jfif') }}" alt="laptop image" class="imgFluid">
+        </div>
+    </section>
+   
+
+
+
+   {% endblock %}
