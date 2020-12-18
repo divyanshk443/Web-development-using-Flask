@@ -1,0 +1,10 @@
+{
+  "params":
+  {
+
+    "local_uri": "mysql+pymysql://root:@localhost:3307/iit_bhilai",
+    "title": "Indian Institute of Technology (IIT) Bhilai",
+    "gmail-user":"kdivyansh658@gmail.com",
+    "gmail-password":"Divyansh@123"
+  }
+}
